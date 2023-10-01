@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+</head>
+<body>
+    <h1>Cryptocurrency Prices</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Symbol</th>
+                <th>Price (USD)</th>
+                <th>Changes (in 24h)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% coins.forEach(coin => { %>
+            <tr>
+                <td><%= coin.name %></td>
+                <td><%= coin.symbol %></td>
+                <td><%= coin.current_price %></td>
+                <td><%= coin.price_change_percentage_24h %></td>
+            </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
